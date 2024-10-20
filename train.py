@@ -17,7 +17,7 @@ print(device)
 
 # anime_characters = ['hatsune_miku', 'albedo', 'aqua_(konosuba)', 'asuna_(sao)', 'c.c', 'chitanda_eru', 'chloe_von_einzbern', 'emilia_rezero', 'fubuki_(one-punch_man)', 'fujiwara_chika', 'hyuuga_hinata', 'illyasviel_von_einzbern', 'ishtar_(fate_grand_order)', 'kamado_nezuko', 'makise_kurisu', 'megumin', 'nico_robin', 'senjougahara_hitagi', 'zero_two_(darling_in_the_franxx)'] # Some female character
 
-anime_characters = ['hatsune_miku']
+anime_characters = None
 
 img_transforms = Compose([
     RandomHorizontalFlip(p=0.5),
@@ -56,7 +56,7 @@ print(f"Total Time taken: {current - start} seconds")
 #     torch.save(model.state_dict(), f"./{'-'.join([ch[:5] for ch in anime_characters])}_model.pth")
 # else:
 #     torch.save(model.state_dict(), "anifemale_model.pth")
-torch.save(model.state_dict(), "anigirl3.pth")
+torch.save(model.state_dict(), "ani_model.pth")
 
 model.eval()
 data = dataset[np.random.randint(len(dataset))].unsqueeze(0)

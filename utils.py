@@ -42,9 +42,8 @@ def interpolate(a, b, alpha):
     return (1 - alpha) * a + alpha * b
 
 def merge_features(a, b, alpha):
+    # This operation can lead to artifacts in output image
     pivot = int(a.shape[0] * (1-alpha))
-    a = a * (1 - alpha)
-    b = b * alpha
     return torch.cat((a[:pivot], b[pivot:]))
 
 def adjust_interpolation_using_graph(img1, img2, encoder, decoder, interpolate=interpolate):

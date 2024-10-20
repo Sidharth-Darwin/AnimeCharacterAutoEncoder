@@ -10,7 +10,7 @@ from model import AutoEncoderModel
 from utils import interpolate, show_interpolated_image, adjust_interpolation_using_graph, merge_features
 
 model_path = "anigirl2_full_model.pth"
-model_weight_path = "anigirl3.pth"
+model_weight_path = "ani_model.pth"
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(device)
