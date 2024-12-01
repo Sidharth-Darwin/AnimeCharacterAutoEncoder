@@ -6,7 +6,7 @@ import torch
 import matplotlib.pyplot as plt
 from sklearn.mixture import GaussianMixture
 from dataset import AniWhoImageDataset
-from model import AutoEncoderModel
+from ae_model import AutoEncoderModel
 from utils import interpolate, show_interpolated_image, adjust_interpolation_using_graph, merge_features
 
 model_path = "anigirl2_full_model.pth"
